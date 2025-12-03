@@ -1,0 +1,236 @@
+/* Default styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  background-color: black;
+}
+
+.logo {
+  color: gold;
+  width: 3em;
+}
+
+.navbar a {
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navbar a:hover {
+  color: gold;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+  border-bottom: 2px solid gold;
+  padding-bottom: 1px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  padding: 20px;
+  background-image: url(../assests/images/ContactUs.JPG);
+}
+
+.container form {
+
+  width: 100%;
+  max-width: 670px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.container form h1 {
+  color: #fff;
+  font-weight: 700;
+  line-height: 2;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.container form input,
+.container form textarea {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background: none;
+  border-bottom: 2px solid #fff;
+  color: black;
+}
+
+.container form input::placeholder,
+.container form textarea::placeholder {
+  color: #fff;
+}
+
+.container form #Mobile,
+.container form #LastName {
+  margin-left: 20px;
+}
+
+.container form h4 {
+  color: #fff;
+  font-weight: 300;
+  width: 100%;
+  margin: 20px 0;
+  padding-left: 15px;
+}
+
+.container form textarea {
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.container form #button {
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.container form #button:hover {
+  background: gold;
+  color: black;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px gold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.footer-title span {
+  color: #ffd902;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icons i {
+  color: gold;
+  font-size: 1em;
+}
+@media screen and (max-width: 1023px) {
+  header {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+  .footer-title {
+    font-size: 0.8em;
+  }
+  .navbar a {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 0.8em;
+  }
+  .social-icons {
+    font-size: 0.7em;
+    gap: 5px;
+  }
+  .navbar a {
+    margin-left: 10px;
+    padding-top: 17px;
+  }
+  .logo {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 20px;
+  }
+
+  .container form {
+    height: auto;
+
+    .container form input,
+    .container form textarea {
+      width: calc(100% - 20px);
+    }
+
+    .container form textarea {
+      min-height: 150px;
+      max-height: 150px;
+    }
+
+    .container form #button {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 935px) {
+  .social-icons i {
+    font-size: 1em;
+    gap: 20px;
+  }
+}
+@media screen and(max-width:641px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 10px;
+  }
+  .logo {
+    font-size: 8px;
+  }
+}

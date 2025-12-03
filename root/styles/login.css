@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("../assests/images/gold.jpeg") no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; /* So header doesn’t overlap the form */
+}
+
+/* HEADER FIX — keeps clickable */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  width: 3.2em;
+}
+
+.navbar a {
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+  font-weight: 500;
+  transition: .3s ease;
+}
+.navbar a:hover {
+  color: gold;
+  border-bottom: 2px solid gold;
+}
+
+/* LOGIN CARD */
+.container {
+  width: 420px;
+  padding: 30px;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255,215,0,0.3);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.15);
+}
+
+h2 {
+  text-align: center;
+  color: gold;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* INPUT FIELD */
+.input-box {
+  position: relative;
+  margin: 25px 0;
+  border-bottom: 2px solid rgba(255,215,0,0.7);
+}
+
+.input-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 0 35px 0 5px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gold;
+}
+
+/* Monkey Emoji */
+.emoji {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+}
+.emoji.show {
+  opacity: 1;
+}
+
+/* REMEMBER + FORGOT */
+.remember-forgot {
+  margin: 10px 0;
+  font-size: .9em;
+  color: gold;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot a {
+  color: #fff;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  background: gold;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: .4s;
+  margin-top: 10px;
+}
+.btn:hover {
+  background: black;
+  color: gold;
+  border: 2px solid gold;
+}
+
+/* Register link */
+.login {
+  text-align: center;
+  margin: 15px 0;
+  color: #fff;
+}
+.login a {
+  color: gold;
+  font-weight: 600;
+}
+.login a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header {
+    padding: 12px 20px;
+  }
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}

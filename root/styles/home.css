@@ -1,0 +1,353 @@
+* {
+   margin: 0;
+    padding: 0;
+     box-sizing: border-box; 
+     font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+     }
+    
+  header {
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center; 
+   z-index: 99; 
+   top: 0; 
+   left: 0; 
+   width: 100%; 
+   padding: 10px 100px; 
+   background-color: black; 
+  } 
+  .logo { 
+    color: gold; 
+    width: 3em; 
+  } 
+  .navbar a { 
+    font-size: 1.1em; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 500; 
+    margin-left: 40px; 
+  } 
+  nav.navbar { 
+    padding-top: 15px; 
+  } 
+  .navbar a:hover { 
+    color: gold; 
+    text-decoration: underline; 
+    font-weight: 500; 
+    transition: 0.5s; 
+    cursor: pointer; 
+    border-bottom: 2px solid gold; 
+    padding-bottom: 1px; 
+  } 
+  section {
+    padding: 100px 100px; 
+  } 
+  .main {
+     position: relative; 
+     width: 100%; 
+     min-height: 100vh; 
+     display: flex; 
+     align-items: center; 
+     background-image: url(../assests/images/Coins.JPG); 
+     background-size: cover; 
+     background-position: center; 
+     background-repeat: no-repeat; 
+     background-attachment: fixed; /*bt5aliha bel nos lama enzal wotl3*/ 
+    } 
+    .main::after { 
+      content: ""; 
+      position: absolute; 
+      inset: 0; 
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)); 
+      z-index: 0; 
+    } 
+    .main > div {
+       position: relative; 
+       z-index: 1; 
+      } 
+    .main h2 {
+       color: gold; 
+       font-size: 1.4em; 
+       font-weight: 500; 
+        } 
+    .main h2 span { 
+      display: inline-block; 
+      margin-top: 10px; 
+      color: white; 
+      font-size: 3em; 
+      font-weight: 700; 
+    } 
+ .main h3 {
+   color: gold; 
+   font-size: 2em; 
+   font-weight: 700; 
+   letter-spacing: 1px; 
+   margin-top: 10px; 
+   margin-bottom: 30px; 
+  } 
+ .main-btn {
+   color: black; 
+   background-color: white; 
+   text-decoration: none; 
+   font-size: 1.1em; 
+   font-weight: 800; 
+   display: inline-block; 
+   padding: 0.9735em 2.187em; 
+   letter-spacing: 1px; border-radius: 15px; 
+   margin-bottom: 40px; 
+   transition: 0.7s ease; 
+   animation: fadeInUp 1s ease forwards; 
+   opacity: 0; 
+    } 
+  @keyframes fadeInUp {
+   from { transform: translateY(30px); 
+    opacity: 0; } to { transform: translateY(0); opacity: 1; } 
+          } 
+  .main-btn:hover {
+    background-color: gold; 
+    color: white; 
+    transform: scale(1.1); 
+   } 
+  .social-icons a {
+     color: gold; 
+     font-size: 1.7em; 
+     padding-right: 30px; 
+   } 
+  .title {
+     display:  flex;
+     justify-content: center; 
+     color: black; 
+     font-size: 2.2em; 
+     font-weight: 800; 
+     margin-bottom: 30px; 
+    } 
+  .content {
+    display: flex;
+    justify-content: center; 
+    flex-direction: row; 
+  flex-wrap: wrap; 
+ } 
+ section#services.cards {
+     background-image: url(../assests/images/BlackAndWhite.JPG); 
+   } 
+   /* Card container */ 
+  .card {
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    width: 17em; 
+    padding: 25px; 
+    margin: 10px; 
+    background-color: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15); 
+    transition: 0.4s ease, box-shadow 0.4s ease; 
+  } 
+  /* Card hover effect */ 
+  .card:hover { transform: scale(1.05); 
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+  } 
+  /* Card paragraph */ 
+  .card p { 
+    flex-grow: 1; 
+    /* fill space above button */ 
+    margin-bottom: 20px;
+    color: black; 
+  } 
+  /* "More..." link */ 
+  .icon { 
+    color: black; 
+    font-size: 8em; 
+    text-align: center; 
+  } 
+  .info { 
+    text-align: center; 
+  } 
+  .info h3 { 
+    color: black; 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    margin: 10px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+  } 
+  .projects {
+    background-color: black; 
+  }
+  .projects .content {
+    margin-top: 30px;
+    }
+  .project-card { 
+    background-color: white; border: 1px solid white; 
+    min-height: 14em; 
+    width: 17em; 
+    overflow: hidden; 
+    margin: 20px; 
+    border-radius: 10px; 
+    transition: 0.7s ease; 
+  } 
+  .project-card:hover {
+    transform: scale(1.1); 
+  } 
+  .project-card:hover .project-img { 
+    opacity: 0.9; 
+  } 
+  .project-img img { 
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    max-height: 170px; 
+    } 
+  .project-info { 
+    padding: 1em; 
+  } 
+  .project-category {
+    font-size: 0.8em; 
+    color: black; 
+  } 
+  .project-title { 
+    display: flex; 
+    justify-content: space-between; 
+    text-transform: uppercase; 
+    font-weight: 800; 
+    margin-top: 10px; 
+  } 
+  .projects .project-card .more-details { 
+    font-size: 0.8em !important; /* smaller text */ 
+    color: black !important; /* default color */ 
+    text-decoration: underline !important; 
+    font-weight: 500 !important; 
+    transition: 0.3s; 
+  } 
+  .projects .project-card .more-details:hover { 
+    color: gold !important; /* hover color */ 
+    text-decoration: underline !important; 
+    cursor: pointer; 
+  } 
+  .footer { 
+    background-color: black; 
+    color: white; 
+    padding: 2em; 
+    display: flex; 
+    justify-content: space-between; 
+  } 
+  .footer-title { 
+    font-size: 1.3em; 
+    font-weight: 600; 
+  } 
+  .footer-title span {
+    color: #ffd902; 
+  } 
+  .footer-title span:hover { cursor: pointer; } 
+  .social-iconss { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+  } 
+  .social-iconss i { 
+    color: gold; 
+    font-size: 1.5em; 
+  } 
+  .social-iconss i:hover { 
+    color: white; 
+    transform: scale(1.2); 
+    transition: 0.3s ease; 
+  } 
+  .back-to-top { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background: gold; 
+    color: black; 
+    border-radius: 50%; 
+    padding: 10px 14px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+    transition: 0.3s; 
+  } 
+  .back-to-top:hover {
+    background: white; 
+  } 
+  @media screen and (max-width: 1023px) { 
+    header { 
+      padding: 12px 20px; 
+      font-size: 1em; 
+    } 
+    .navbar a { 
+      padding-left: 10px; 
+      font-size: 0.8em; 
+      } 
+    h1 { 
+      font-size: 3.2rem; 
+    } 
+    .social-iconss {
+      font-size: 0.7em; 
+      gap: 5px; 
+      padding-bottom: 13px; 
+    } 
+    .footer-title { 
+      font-size: 0.8em; 
+    } 
+    .navbar a { 
+      margin-left: 10px; 
+    } 
+    .logo {
+      font-size: 1.2em; 
+    } 
+    section { 
+      padding: 80px 20px; 
+    } 
+    .main h2 {
+      font-size: 1em; 
+    } 
+    .main h3 { 
+      font-size: 1.6em; 
+    } 
+    .content { 
+      flex-direction: column; 
+      align-items: center; 
+    } 
+  } 
+  @media screen and (max-width: 641px) { 
+    body { 
+      font-size: 12px; 
+    } 
+    .main h2 span { 
+      font-size: 2em; 
+    } 
+    .main h3 { 
+      font-size: 1.2em; 
+    } 
+    .main-btn { 
+      padding: 0.6em 1.5em; 
+      font-size: 1em; 
+    } 
+  } 
+  @media screen and (max-width: 300px) { 
+    body { 
+      font-size: 10px; 
+    } 
+    .logo { 
+      font-size: 8px; 
+    } 
+  } 
+  @media screen and (min-width: 768px) and (max-width: 1030px) {
+    .card { 
+      width: 30em; 
+    } 
+    .project-card {
+      width: 25em; 
+    } 
+  }    
+  @media screen and (max-width: 768px) { 
+    .footer { 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      gap: 20px; 
+      }
+}
